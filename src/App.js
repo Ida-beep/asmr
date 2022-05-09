@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Sketch from "./P5/Sketch";
+import Footer from "./components/Footer.js";
+import Video from "./components/Video";
+
+/**
+ * App is responsible for connecting all components of the UI together with the P5 sketch
+ * that return a value that will warp the sound
+ */
 
 function App() {
+  const pageStyle = {
+    display: "flex",
+    flexDirection: "column",
+    widht: "100%",
+    height: "100%",
+    //backGroundColor: "black",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={pageStyle}>
+      <Video />
+      <Footer />
+      <Sketch />
     </div>
   );
 }
