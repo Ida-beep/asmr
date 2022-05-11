@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { SoundPictur as ReactComponent } from "../assets/noun-sound-1985240.svg";
+//import Sound from "../assets/noun-sound-1985240.svg";
 
 function Button(props) {
-  const darkColor = "rgb(0, 0, 34)";
+  const darkColor = "grey";
   const lightColor = "#FFF8DC";
   const [backgroundColor, changeBackgroundColor] = useState(lightColor);
   const [textColor, changeTextColor] = useState(darkColor);
@@ -32,14 +34,16 @@ function Button(props) {
 
   const footer = {
     display: "flex",
-    height: "100px",
+    height: "0px",
     //backgroundColor: "white",
   };
 
   const text = {
     display: "flex",
     cusor: "pointer",
-    marginLeft: "30px",
+    //justifyItems: "center",
+    marginLeft: "7px",
+    marginTop: "10px",
     color: textColor,
   };
 
@@ -50,7 +54,8 @@ function Button(props) {
   return (
     <div style={footer}>
       <div onClick={onClick} style={circle}>
-        <h1 style={text}>{props.text}</h1>
+        {/* <h1 style={text}>{props.text}</h1> */}
+        <img style={text} src={props.image} alt={props.alt}></img>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
-import Sketch from "./P5/Sketch";
+//import Sketch from "./P5/Sketch";
 import Footer from "./components/Footer.js";
 import Video from "./components/Video";
+import Information from "./components/Information";
+import Information2 from "./components/Information-2";
 
 /**
  * App is responsible for connecting all components of the UI together with the P5 sketch
@@ -16,11 +18,22 @@ function App() {
     //backGroundColor: "black",
   };
 
+  const horisontalStyle = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    height: "1000px",
+    width: "100%",
+  };
+
   return (
     <div style={pageStyle}>
-      <Video />
+      <div style={horisontalStyle}>
+        <Information />
+        <Video />
+        <Information2 />
+      </div>
       <Footer />
-      <Sketch />
     </div>
   );
 }
